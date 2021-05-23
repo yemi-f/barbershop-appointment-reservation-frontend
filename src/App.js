@@ -13,7 +13,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCheckCircle, faExclamationCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Dashboard from './pages/Dashboard';
 library.add(faCheckCircle, faExclamationCircle, faExclamationTriangle);
-axios.defaults.baseURL = `http://localhost:5000`;
+axios.defaults.baseURL = `https://barbershop-appointments.herokuapp.com`;
 
 
 function App() {
