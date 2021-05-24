@@ -136,7 +136,7 @@ export const ReservationForm = () => {
                         <Form.Control as="select" required
                             name="startTime" value={data.startTime} onChange={handleInputChange}>
                             {times.map(startTime => {
-                                return <option key={startTime}>{dayjs(startTime).format("HH:mm")}</option>
+                                return <option key={startTime} value={startTime}>{dayjs(startTime).format("HH:mm")}</option>
                             })}
                         </Form.Control>
 
