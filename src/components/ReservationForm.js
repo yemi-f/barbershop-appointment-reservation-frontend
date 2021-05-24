@@ -11,7 +11,7 @@ dayjs.extend(utc)
 
 export const ReservationForm = () => {
     const history = useHistory();
-    const [minDate, setMinDate] = useState(getNextBusinessDay);
+    const minDate = getNextBusinessDay;
     const [times, setTimes] = useState([]);
     const [data, setData] = useState({
         firstName: "",
