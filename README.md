@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+## Description
+This is the front-end for the web application of a barbershop. The backend can be found at [barbershop-appointment-reservation-backend](https://github.com/yemi-f/barbershop-appointment-reservation-backend).
+
+- site `Visitors` can book appointments for haircuts
+- `Admins` can view all reservations and delete reservations
+
+The frontend was built with React and Bootstrap
+
+
+## Explore the app
+
+ - book an appointment
+ - log in as an admin: navigate to `/dashboard`
+	 - `email` ap@apple.com
+	 - `password` appleseed
+	 - view reservations by date
+	 - delete reservations
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
