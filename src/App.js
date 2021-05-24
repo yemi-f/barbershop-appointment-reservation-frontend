@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState } from 'react';
 import AppHeader from './components/AppHeader';
 import { ReservationForm, Success } from './components/ReservationForm';
