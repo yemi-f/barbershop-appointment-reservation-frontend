@@ -64,7 +64,7 @@ export const ReservationForm = () => {
                     state: { success: true }
                 });
             })
-            .catch(err => {
+            .catch(() => {
                 history.push({
                     pathname: "/error",
                     state: { success: false }
