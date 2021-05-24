@@ -16,6 +16,10 @@ The frontend was built with React and Bootstrap
 	 - view reservations by date
 	 - delete reservations
 
+## Demo
+
+Live demo at https://flamboyant-noether-f62ac3.netlify.app/
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
