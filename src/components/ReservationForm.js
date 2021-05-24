@@ -7,7 +7,10 @@ import axios from 'axios';
 import { useHistory, useLocation } from "react-router-dom";
 import Flatpickr from "react-flatpickr";
 import utc from 'dayjs/plugin/utc';
+import LocalizedFormat from "dayjs/plugin/localizedFormat";
 dayjs.extend(utc)
+dayjs.extend(LocalizedFormat)
+
 
 export const ReservationForm = () => {
     const history = useHistory();
@@ -58,10 +61,10 @@ export const ReservationForm = () => {
         delete tempData.date;
 
         axios.post("/reservations", tempData)
-            .then(() => {
+            .then((res) => {
                 history.push({
                     pathname: "/success",
-                    state: { success: true }
+                    state: { success: true, data: res.data }
                 });
             })
             .catch(() => {
@@ -162,8 +165,12 @@ export const Success = () => {
                 <div className="my-2" >
                     {location.state.success
                         ? <>
-                            <h1>Thank You!</h1>
-                            <h3 className="font-weight-light">Your appointment has been booked</h3>
+                            <h1 className="pb-2">Thank You!</h1>
+                            <h3 className="font-weight-light">
+                                Your appointment is booked for
+                            </h3>
+                            <h3 className="py-1">{dayjs(location.state.data.startTime).format("LLLL")}</h3>
+                            <p className="lead text-muted">Reservation ID: {location.state.data._id}</p>
                         </>
                         : <>
                             <h1>Your appointment could not be booked.</h1>
